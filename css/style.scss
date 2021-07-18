@@ -58,7 +58,7 @@ a {
 }
 
 .container {
-    width: 82%;
+    width: 84%;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -179,7 +179,7 @@ nav {
         max-width: 500px;
         right: 0;
         top: calc(12em + 6vw);
-        border-radius: 100px 0 0 100px;
+        border-radius: 100px 0 0 120px;
         position: absolute;
         z-index: -1;
         background: $soft-blue;
@@ -201,9 +201,9 @@ nav {
         }
 
         .firefox {
-            border: 2px rgb(245, 245, 245) solid;
-            color: rgb(104, 104, 104);
-            background: rgb(245, 245, 245);
+            border: 2px whitesmoke solid;
+            color: dimgray;
+            background: whitesmoke;
         }
     }
 }
@@ -212,7 +212,7 @@ nav {
     padding-top: 6em;
 
     header {
-        max-width: 600px;
+        max-width: 620px;
         margin: 0 auto;
     }
 
@@ -365,6 +365,7 @@ nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            text-align: left;
 
             svg {
                 transition: all 0.3s ease-in;
@@ -384,13 +385,13 @@ nav {
         .panel {
             text-align: left;
             line-height: 2;
-            color: $gray-blue;
+            color: dimgray;
 
             padding: 0.5em 0 2em;
             max-height: 0;
             display: none;
             overflow: hidden;
-            border-bottom: 1px rgb(196, 196, 196) solid;
+            border-bottom: 1px lightgray solid;
             transition: all 0.3s ease-out;
         }
     }
@@ -518,7 +519,7 @@ footer {
         }
         .firefox:hover {
             background: none;
-            border: 2px rgb(104, 104, 104) solid;
+            border: 2px dimgray solid;
         }
     }
 
@@ -554,15 +555,25 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
-    .container {
-        width: 80%;
-        max-width: 1000px;
+    h1 {
+        font-size: 2.5rem;
     }
 
-    .hero {
-        .container {
-            width: 60%;
-        }
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 1200px;
     }
 
     nav {
@@ -576,11 +587,11 @@ footer {
                 flex-direction: row;
                 padding: 0;
                 justify-content: flex-end;
-                gap: 1.5em;
+                gap: 1.8em;
 
                 a {
                     color: $v-dark-blue;
-                    font-size: 0.6rem;
+                    font-size: 0.8rem;
                     border: none;
                     padding: 0;
                     margin: 0;
@@ -633,22 +644,31 @@ footer {
 
     .features {
         header {
+            max-width: 800px;
             p {
                 padding: 0 3em;
             }
         }
+
         .tabs {
             flex-direction: row;
-            border-bottom: 1px rgb(228, 228, 228) solid;
+            border-bottom: 1px lightgray solid;
             padding: 2em 0 0;
             justify-content: space-between;
 
             button {
                 border: none;
+                padding: 1.2em 2em;
+                width: 80vw;
 
                 &:last-child {
                     border: none;
                 }
+            }
+
+            button.active::after {
+                left: 5%;
+                width: 90%;
             }
         }
 
@@ -657,10 +677,7 @@ footer {
             gap: 4em;
             padding-top: 3em;
             text-align: left;
-
-            // .content_text {
-            //     width: 50vw;
-            // }
+            align-items: center;
 
             a {
                 margin-top: 1em;
@@ -669,13 +686,16 @@ footer {
             }
 
             img {
+                max-width: 500px;
+                width: 120%;
+                margin: 0;
                 height: 25vw;
             }
 
             &::after {
                 top: 11vw;
                 width: 45vw;
-                height: 24vw;
+                height: 20vw;
             }
         }
 
@@ -684,8 +704,22 @@ footer {
         }
     }
 
-    .faq .accordian .question:first-child {
-        border-top: 1px rgb(196, 196, 196) solid;
+    .download header {
+        max-width: 600px;
+    }
+
+    .faq .accordian {
+        .question {
+            font-size: 1.2rem;
+        }
+
+        .question:first-child {
+            border-top: 1px lightgray solid;
+        }
+
+        .panel {
+            font-size: 1rem;
+        }
     }
 
     .contact {
@@ -736,30 +770,32 @@ footer {
 
 @media screen and (min-width: 1010px) {
     body {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .container {
-        width: 78%;
+        width: 80%;
     }
 
     .hero {
-        width: 78%;
+        width: 80%;
         margin: 2em auto 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-flow: dense;
-        gap: 1em;
+        gap: 5em;
 
         .hero_img {
-            width: 50vw;
+            // width: 60vw;
+            max-width: 600px;
             grid-column: 2;
             padding: 0;
             margin-right: -5em;
         }
 
         .blob {
-            width: 37%;
+            width: 35%;
+            max-height: 330px;
         }
 
         .hero_content {
@@ -798,6 +834,7 @@ footer {
 
     .faq {
         padding: 1em 0 7em;
+        max-width: 550px !important;
 
         .accordian {
             margin: 2em 0 3em;

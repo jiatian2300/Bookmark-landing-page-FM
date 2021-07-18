@@ -50,7 +50,7 @@ a {
 }
 
 .container {
-  width: 82%;
+  width: 84%;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -195,7 +195,7 @@ nav .nav_toggle {
   max-width: 500px;
   right: 0;
   top: calc(12em + 6vw);
-  border-radius: 100px 0 0 100px;
+  border-radius: 100px 0 0 120px;
   position: absolute;
   z-index: -1;
   background: #5368df;
@@ -224,7 +224,7 @@ nav .nav_toggle {
 
 .hero .hero_btns .firefox {
   border: 2px whitesmoke solid;
-  color: #686868;
+  color: dimgray;
   background: whitesmoke;
 }
 
@@ -233,7 +233,7 @@ nav .nav_toggle {
 }
 
 .features header {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
 }
 
@@ -413,6 +413,7 @@ nav .nav_toggle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: left;
 }
 
 .faq .accordian .question svg {
@@ -436,12 +437,12 @@ nav .nav_toggle {
 .faq .accordian .panel {
   text-align: left;
   line-height: 2;
-  color: #9194a1;
+  color: dimgray;
   padding: 0.5em 0 2em;
   max-height: 0;
   display: none;
   overflow: hidden;
-  border-bottom: 1px #c4c4c4 solid;
+  border-bottom: 1px lightgray solid;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -581,7 +582,7 @@ footer .social_icons {
   }
   .hero .hero_content .hero_btns .firefox:hover {
     background: none;
-    border: 2px #686868 solid;
+    border: 2px dimgray solid;
   }
   .features .tabs button:hover {
     color: #fa5757;
@@ -607,12 +608,21 @@ footer .social_icons {
 }
 
 @media screen and (min-width: 700px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  a {
+    font-size: 1rem;
+  }
   .container {
     width: 80%;
-    max-width: 1000px;
-  }
-  .hero .container {
-    width: 60%;
+    max-width: 1200px;
   }
   nav .nav_menu {
     height: 100%;
@@ -631,11 +641,11 @@ footer .social_icons {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    gap: 1.5em;
+    gap: 1.8em;
   }
   nav .nav_menu .nav_links a {
     color: #252b46;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     border: none;
     padding: 0;
     margin: 0;
@@ -672,6 +682,9 @@ footer .social_icons {
     max-width: 350px;
     margin: 0 auto;
   }
+  .features header {
+    max-width: 800px;
+  }
   .features header p {
     padding: 0 3em;
   }
@@ -680,7 +693,7 @@ footer .social_icons {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    border-bottom: 1px #e4e4e4 solid;
+    border-bottom: 1px lightgray solid;
     padding: 2em 0 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -688,9 +701,15 @@ footer .social_icons {
   }
   .features .tabs button {
     border: none;
+    padding: 1.2em 2em;
+    width: 80vw;
   }
   .features .tabs button:last-child {
     border: none;
+  }
+  .features .tabs button.active::after {
+    left: 5%;
+    width: 90%;
   }
   .features .tabcontent {
     -webkit-box-orient: horizontal;
@@ -700,6 +719,9 @@ footer .social_icons {
     gap: 4em;
     padding-top: 3em;
     text-align: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .features .tabcontent a {
     margin-top: 1em;
@@ -709,20 +731,32 @@ footer .social_icons {
     width: fit-content;
   }
   .features .tabcontent img {
+    max-width: 500px;
+    width: 120%;
+    margin: 0;
     height: 25vw;
   }
   .features .tabcontent::after {
     top: 11vw;
     width: 45vw;
-    height: 24vw;
+    height: 20vw;
   }
   .features #simple {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+  .download header {
+    max-width: 600px;
+  }
+  .faq .accordian .question {
+    font-size: 1.2rem;
+  }
   .faq .accordian .question:first-child {
-    border-top: 1px #c4c4c4 solid;
+    border-top: 1px lightgray solid;
+  }
+  .faq .accordian .panel {
+    font-size: 1rem;
   }
   .contact form {
     display: -ms-grid;
@@ -771,30 +805,31 @@ footer .social_icons {
 
 @media screen and (min-width: 1010px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
   .container {
-    width: 78%;
+    width: 80%;
   }
   .hero {
-    width: 78%;
+    width: 80%;
     margin: 2em auto 0;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
-    gap: 1em;
+    gap: 5em;
   }
   .hero .hero_img {
-    width: 50vw;
+    max-width: 600px;
     -ms-grid-column: 2;
     grid-column: 2;
     padding: 0;
     margin-right: -5em;
   }
   .hero .blob {
-    width: 37%;
+    width: 35%;
+    max-height: 330px;
   }
   .hero .hero_content {
     text-align: left;
@@ -827,6 +862,7 @@ footer .social_icons {
   }
   .faq {
     padding: 1em 0 7em;
+    max-width: 550px !important;
   }
   .faq .accordian {
     margin: 2em 0 3em;
