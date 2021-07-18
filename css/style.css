@@ -47,6 +47,8 @@ a {
   border-radius: 5px;
   text-decoration: none;
   padding: 1em;
+  -webkit-box-shadow: 0 3px 8px rgba(145, 148, 161, 0.4);
+          box-shadow: 0 3px 8px rgba(145, 148, 161, 0.4);
 }
 
 .container {
@@ -118,6 +120,8 @@ nav .nav_menu .nav_links a {
   padding: 0.65em;
   border-bottom: 1.5px rgba(145, 148, 161, 0.3) solid;
   border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.2rem;
@@ -214,8 +218,6 @@ nav .nav_toggle {
 
 .hero .hero_btns a {
   padding: 1em 0.9em;
-  -webkit-box-shadow: 0 3px 8px rgba(145, 148, 161, 0.4);
-          box-shadow: 0 3px 8px rgba(145, 148, 161, 0.4);
 }
 
 .hero .hero_btns .chrome {
@@ -311,7 +313,7 @@ nav .nav_toggle {
   content: "";
   width: 85vw;
   height: 55vw;
-  max-height: 330px;
+  max-height: 340px;
   max-width: 500px;
   right: 0;
   top: 18vw;
@@ -485,14 +487,15 @@ nav .nav_toggle {
 }
 
 .contact form .input {
-  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .contact form .input input {
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 4px;
   border: none;
   width: 100%;
+  position: relative;
 }
 
 .contact form .input p,
@@ -507,8 +510,9 @@ nav .nav_toggle {
 
 .contact form .error {
   background: #fa5757;
-  padding: 3px;
-  border-radius: 6px;
+  padding: 0;
+  border-radius: 5px;
+  border: 3px #fa5757 solid;
 }
 
 .contact form .error p {
@@ -563,6 +567,8 @@ footer .footer_links a {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 footer .social_icons {
@@ -840,6 +846,20 @@ footer .social_icons {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .hero .hero_content .hero_btns a {
+    padding: 1em 1.7em;
+  }
+  .features header p {
+    padding: 0 6em;
+  }
+  .features .tabcontent {
+    gap: 6em;
+  }
+  .features .tabcontent::after {
+    top: 9.5vw;
+    max-width: 630px;
+    height: 28vw;
+  }
   .download .cards {
     max-width: 1000px;
     display: -webkit-box;
@@ -849,7 +869,8 @@ footer .social_icons {
     padding-top: 5em;
   }
   .download .cards .card {
-    height: 21em;
+    height: 19em;
+    padding: 1.3em;
   }
   .download .cards .card:first-child {
     margin-top: -2.5em;
@@ -860,6 +881,9 @@ footer .social_icons {
   .download .cards .card a {
     padding: 1em;
   }
+  .download .cards .card .logo {
+    margin-top: 0.8em;
+  }
   .faq {
     padding: 1em 0 7em;
     max-width: 550px !important;
@@ -869,6 +893,10 @@ footer .social_icons {
   }
   .contact {
     padding: 3em 0 2em;
+  }
+  .contact form .error img {
+    right: 7.7em;
+    top: 0.7em;
   }
 }
 

@@ -55,6 +55,7 @@ a {
     border-radius: 5px;
     text-decoration: none;
     padding: 1em;
+    box-shadow: 0 3px 8px rgba($color: $gray-blue, $alpha: 0.4);
 }
 
 .container {
@@ -102,6 +103,7 @@ nav {
                 padding: 0.65em;
                 border-bottom: 1.5px rgba($color: $gray-blue, $alpha: 0.3) solid;
                 border-radius: 0;
+                box-shadow: none;
 
                 text-transform: uppercase;
                 font-weight: 400;
@@ -193,7 +195,6 @@ nav {
 
         a {
             padding: 1em 0.9em;
-            box-shadow: 0 3px 8px rgba($color: $gray-blue, $alpha: 0.4);
         }
 
         .chrome {
@@ -244,7 +245,6 @@ nav {
                 background: $soft-red;
                 position: absolute;
                 height: 4px;
-                // width: 9em;
                 width: 50%;
                 left: 25%;
                 bottom: 0;
@@ -276,7 +276,7 @@ nav {
             content: "";
             width: 85vw;
             height: 55vw;
-            max-height: 330px;
+            max-height: 340px;
             max-width: 500px;
             right: 0;
             top: 18vw;
@@ -428,12 +428,13 @@ nav {
         position: relative;
 
         .input {
-            margin-bottom: 1.5em;
+            padding-bottom: 1.5em;
             input {
                 padding: 1em;
-                border-radius: 5px;
+                border-radius: 4px;
                 border: none;
                 width: 100%;
+                position: relative;
             }
 
             p,
@@ -449,8 +450,9 @@ nav {
 
         .error {
             background: $soft-red;
-            padding: 3px;
-            border-radius: 6px;
+            padding: 0;
+            border-radius: 5px;
+            border: 3px $soft-red solid;
 
             p {
                 display: block;
@@ -500,6 +502,7 @@ footer {
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 400;
+            box-shadow: none;
         }
     }
 
@@ -786,7 +789,6 @@ footer {
         gap: 5em;
 
         .hero_img {
-            // width: 60vw;
             max-width: 600px;
             grid-column: 2;
             padding: 0;
@@ -804,6 +806,27 @@ footer {
 
             .hero_btns {
                 justify-content: flex-start;
+                a {
+                    padding: 1em 1.7em;
+                }
+            }
+        }
+    }
+
+    .features {
+        header {
+            p {
+                padding: 0 6em;
+            }
+        }
+
+        .tabcontent {
+            gap: 6em;
+
+            &::after {
+                top: 9.5vw;
+                max-width: 630px;
+                height: 28vw;
             }
         }
     }
@@ -815,7 +838,8 @@ footer {
             gap: 1.5em;
             padding-top: 5em;
             .card {
-                height: 21em;
+                height: 19em;
+                padding: 1.3em;
 
                 &:first-child {
                     margin-top: -2.5em;
@@ -827,6 +851,10 @@ footer {
 
                 a {
                     padding: 1em;
+                }
+
+                .logo {
+                    margin-top: 0.8em;
                 }
             }
         }
@@ -843,6 +871,11 @@ footer {
 
     .contact {
         padding: 3em 0 2em;
+
+        form .error img {
+            right: 7.7em;
+            top: 0.7em;
+        }
     }
 }
 
