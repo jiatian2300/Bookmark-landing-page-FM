@@ -13,6 +13,10 @@ body {
   position: relative;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 button {
   font-family: "Rubik", sans-serif;
 }

@@ -62,6 +62,17 @@ form.addEventListener("submit", (e) => {
 }
 ```
 
+Prevent scrolling when nav menu is open
+
+```css
+.fixed-position {
+    position: fixed;
+}
+```
+```js
+document.body.classList.toggle("fixed-position");
+```
+
 ### Useful resources
 
 - [Tabs](https://www.w3schools.com/howto/howto_js_tabs.asp)

@@ -1,8 +1,10 @@
 // Toogle menu
-const nav = document.querySelector(".nav_toggle");
+const toggle = document.querySelector(".nav_toggle");
+const nav = document.querySelector("nav");
 
-nav.addEventListener("click", () => {
+toggle.addEventListener("click", () => {
     nav.classList.toggle("nav_active");
+    document.body.classList.toggle("fixed-position");
 });
 
 // Tabs
