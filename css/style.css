@@ -208,7 +208,7 @@ nav .nav_toggle {
   max-height: 270px;
   max-width: 500px;
   right: 0;
-  top: calc(12em + 6vw);
+  top: calc(10em + 6vw);
   border-radius: 100px 0 0 160px;
   position: absolute;
   z-index: -1;
