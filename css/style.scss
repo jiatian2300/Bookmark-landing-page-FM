@@ -712,9 +712,9 @@ footer {
             }
 
             &::after {
-                top: calc(3em + 5vw);
-                width: 45vw;
-                height: calc(11em + 10vw);
+                top: calc(15em - 10vw);
+                width: 49vw;
+                height: calc(9em + 10vw);
             }
         }
 
@@ -846,7 +846,7 @@ footer {
             gap: 6em;
 
             &::after {
-                top: 11vw;
+                top: calc(9vw + 2em);
                 max-width: 630px;
                 height: 22vw;
             }
