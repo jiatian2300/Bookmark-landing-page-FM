@@ -293,6 +293,7 @@ nav .nav_toggle {
 }
 
 .features .tabcontent {
+  padding-top: 2.5em;
   position: relative;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -327,7 +328,7 @@ nav .nav_toggle {
   max-height: 340px;
   max-width: 500px;
   right: 0;
-  top: 18vw;
+  top: calc(18vw + 2.5em);
   border-radius: 0 130px 130px 0;
   position: absolute;
   margin-left: -15vw;
