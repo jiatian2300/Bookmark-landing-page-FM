@@ -10,7 +10,6 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -43,21 +42,23 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Email validation & SetTimeout function
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (error.classList.contains("error") || input.value.length === 0) {
+        return;
+    } else {
+        input.value = "";
+        error.classList.remove("error");
+        error.classList.add("success");
+
+        setTimeout(function () {
+            error.classList.remove("success");
+        }, 3000);
+    }
+});
 }
 ```
 

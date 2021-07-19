@@ -1,5 +1,5 @@
 // Toogle menu
-const nav = document.querySelector("nav");
+const nav = document.querySelector(".nav_toggle");
 
 nav.addEventListener("click", () => {
     nav.classList.toggle("nav_active");
