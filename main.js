@@ -79,3 +79,14 @@ form.addEventListener("submit", (e) => {
         }, 3000);
     }
 });
+
+// Sticky Nav Bar
+var sticky = nav.offsetTop; // When the user scrolls the page, execute myFunction
+
+window.onscroll = function () {
+    if (window.pageYOffset >= sticky) {
+        nav.classList.add("sticky");
+    } else {
+        nav.classList.remove("sticky");
+    }
+};

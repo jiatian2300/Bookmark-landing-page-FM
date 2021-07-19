@@ -55,6 +55,9 @@ a {
           box-shadow: 0 3px 8px rgba(145, 148, 161, 0.4);
 }
 
+/* ======================
+    Small Sized Screens
+=========================*/
 .container {
   width: 84%;
   max-width: 500px;
@@ -62,7 +65,10 @@ a {
 }
 
 nav {
-  padding: 3em 0;
+  padding: 2em 0;
+}
+
+nav .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,7 +209,7 @@ nav .nav_toggle {
   max-width: 500px;
   right: 0;
   top: calc(12em + 6vw);
-  border-radius: 100px 0 0 170px;
+  border-radius: 100px 0 0 160px;
   position: absolute;
   z-index: -1;
   background: #5368df;
@@ -607,6 +613,9 @@ footer .social_icons {
           justify-content: center;
 }
 
+/* ======================
+    Hover/ Active States
+=========================*/
 @media screen and (min-width: 500px) {
   .hero .hero_content .hero_btns .chrome:hover {
     background: none;
@@ -639,6 +648,9 @@ footer .social_icons {
   }
 }
 
+/* ======================
+    Medium Sized Screens
+=========================*/
 @media screen and (min-width: 700px) {
   h1 {
     font-size: 2.5rem;
@@ -655,6 +667,20 @@ footer .social_icons {
   .container {
     width: 80%;
     max-width: 1200px;
+  }
+  .sticky {
+    top: 0;
+    -webkit-box-shadow: 0 3px 8px rgba(145, 148, 161, 0.15);
+            box-shadow: 0 3px 8px rgba(145, 148, 161, 0.15);
+    position: fixed;
+  }
+  nav {
+    position: absolute;
+    width: 100%;
+    background: white;
+    top: 1.4em;
+    padding: 0.6em 0;
+    z-index: 2;
   }
   nav .nav_menu {
     height: 100%;
@@ -689,8 +715,8 @@ footer .social_icons {
     margin: 0;
     background: #fa5757;
     color: white;
-    padding: 0.6em 2.5em;
-    border-radius: 7px;
+    padding: 0.4em 2.5em;
+    border-radius: 5px;
     border: 2px #fa5757 solid;
   }
   nav .nav_menu .nav_links a:hover {
@@ -705,6 +731,9 @@ footer .social_icons {
   }
   nav .nav_toggle {
     display: none;
+  }
+  .hero {
+    padding-top: 8.5em;
   }
   .download header {
     max-width: 500px;
@@ -837,6 +866,9 @@ footer .social_icons {
   }
 }
 
+/* ======================
+    Large Sized Screens
+=========================*/
 @media screen and (min-width: 1070px) {
   body {
     font-size: 20px;
@@ -844,9 +876,12 @@ footer .social_icons {
   .container {
     width: 80%;
   }
+  nav .nav_menu .nav_links {
+    gap: 2em;
+  }
   .hero {
     width: 80%;
-    margin: 2em auto 0;
+    margin: 0 auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -863,8 +898,8 @@ footer .social_icons {
     margin-right: -5em;
   }
   .hero .blob {
-    width: 35%;
-    max-height: 330px;
+    width: 33%;
+    max-height: 300px;
   }
   .hero .hero_content {
     text-align: left;
