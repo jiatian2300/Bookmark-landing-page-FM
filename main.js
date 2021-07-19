@@ -49,6 +49,7 @@ function openPanel() {
 // Email validation
 const error = document.querySelector(".input");
 const input = document.querySelector("input");
+const form = document.querySelector("form");
 
 var pattern =
     /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])$/;
@@ -61,3 +62,18 @@ function validation() {
         error.classList.add("error");
     }
 }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (error.classList.contains("error") || input.value.length === 0) {
+        return;
+    } else {
+        input.value = "";
+        error.classList.remove("error");
+        error.classList.add("success");
+
+        setTimeout(function () {
+            error.classList.remove("success");
+        }, 3000);
+    }
+});

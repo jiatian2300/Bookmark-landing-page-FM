@@ -34,7 +34,7 @@ h2 {
 p {
   font-size: 0.95rem;
   font-weight: normal;
-  color: darkgray;
+  color: #5e5e5e;
   line-height: 1.7;
   margin: 0;
 }
@@ -189,7 +189,7 @@ nav .nav_toggle {
   padding-top: 2em;
   padding-bottom: 1.5em;
   width: 93vw;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .hero .blob {
@@ -199,7 +199,7 @@ nav .nav_toggle {
   max-width: 500px;
   right: 0;
   top: calc(12em + 6vw);
-  border-radius: 100px 0 0 120px;
+  border-radius: 100px 0 0 170px;
   position: absolute;
   z-index: -1;
   background: #5368df;
@@ -240,7 +240,7 @@ nav .nav_toggle {
 }
 
 .features .tabs {
-  padding: 3em 0;
+  padding-top: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +254,7 @@ nav .nav_toggle {
   padding: 1.2em;
   font-size: 1rem;
   letter-spacing: 1px;
-  color: #7c7c7c;
+  color: #525252;
   background: none;
   border: none;
   border-top: 1px #e4e4e4 solid;
@@ -267,7 +267,8 @@ nav .nav_toggle {
 }
 
 .features .tabs button.active {
-  color: #383838;
+  color: black;
+  font-weight: 500;
 }
 
 .features .tabs button.active::after {
@@ -317,7 +318,7 @@ nav .nav_toggle {
   max-width: 500px;
   right: 0;
   top: 18vw;
-  border-radius: 0 90px 90px 0;
+  border-radius: 0 130px 130px 0;
   position: absolute;
   margin-left: -15vw;
   left: 0;
@@ -341,6 +342,8 @@ nav .nav_toggle {
 
 .download .cards .card {
   width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
   height: 23em;
   margin-bottom: 3em;
   padding: 1.6em;
@@ -487,7 +490,7 @@ nav .nav_toggle {
 }
 
 .contact form .input {
-  padding-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .contact form .input input {
@@ -515,14 +518,17 @@ nav .nav_toggle {
   border: 3px #fa5757 solid;
 }
 
-.contact form .error p {
+.contact form .error .error_msg {
   display: block;
   text-transform: none;
   text-align: left;
   font-size: 0.7rem;
   letter-spacing: 1px;
-  padding-left: 1em;
-  padding-top: 0.5em;
+  padding: 0.5em 0 0.3em 1em;
+}
+
+.contact form .error .succ_msg {
+  display: none;
 }
 
 .contact form .error img {
@@ -530,6 +536,22 @@ nav .nav_toggle {
   position: absolute;
   right: 1em;
   top: 1em;
+}
+
+.contact form .success {
+  padding: 0;
+}
+
+.contact form .success .error_msg {
+  display: none;
+}
+
+.contact form .success .succ_msg {
+  display: block;
+  text-align: left;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  padding-top: 0.8em;
 }
 
 .contact form button {
@@ -684,10 +706,6 @@ footer .social_icons {
     max-width: 500px;
     margin: 0 auto;
   }
-  .download .cards {
-    max-width: 350px;
-    margin: 0 auto;
-  }
   .features header {
     max-width: 800px;
   }
@@ -743,9 +761,9 @@ footer .social_icons {
     height: 25vw;
   }
   .features .tabcontent::after {
-    top: 11vw;
+    top: calc(3em + 5vw);
     width: 45vw;
-    height: 20vw;
+    height: calc(11em + 10vw);
   }
   .features #simple {
     display: -webkit-box;
@@ -764,12 +782,18 @@ footer .social_icons {
   .faq .accordian .panel {
     font-size: 1rem;
   }
+  .contact {
+    padding: 3em 0 1em;
+  }
   .contact form {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr auto;
         grid-template-columns: 1fr auto;
     gap: 1em;
+  }
+  .contact form .input {
+    height: 4.8em;
   }
   .contact form .error img {
     right: 9.2em;
@@ -780,7 +804,7 @@ footer .social_icons {
     height: 3em;
   }
   footer {
-    padding: 1.5em 0;
+    padding: 1.2em 0;
   }
   footer .container {
     display: -ms-grid;
@@ -809,7 +833,7 @@ footer .social_icons {
   }
 }
 
-@media screen and (min-width: 1010px) {
+@media screen and (min-width: 1070px) {
   body {
     font-size: 20px;
   }
@@ -827,7 +851,8 @@ footer .social_icons {
     gap: 5em;
   }
   .hero .hero_img {
-    max-width: 600px;
+    max-width: 620px;
+    width: 43vw;
     -ms-grid-column: 2;
     grid-column: 2;
     padding: 0;
@@ -856,9 +881,9 @@ footer .social_icons {
     gap: 6em;
   }
   .features .tabcontent::after {
-    top: 9.5vw;
+    top: 11vw;
     max-width: 630px;
-    height: 28vw;
+    height: 22vw;
   }
   .download .cards {
     max-width: 1000px;
@@ -880,6 +905,7 @@ footer .social_icons {
   }
   .download .cards .card a {
     padding: 1em;
+    font-size: 0.7em;
   }
   .download .cards .card .logo {
     margin-top: 0.8em;
@@ -891,8 +917,8 @@ footer .social_icons {
   .faq .accordian {
     margin: 2em 0 3em;
   }
-  .contact {
-    padding: 3em 0 2em;
+  .contact form .input {
+    height: 3.6em;
   }
   .contact form .error img {
     right: 7.7em;

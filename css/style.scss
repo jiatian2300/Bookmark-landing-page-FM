@@ -42,7 +42,7 @@ h2 {
 p {
     font-size: 0.95rem;
     font-weight: normal;
-    color: darkgray;
+    color: rgb(94, 94, 94);
     line-height: 1.7;
     margin: 0;
 }
@@ -172,7 +172,7 @@ nav {
         padding-top: 2em;
         padding-bottom: 1.5em;
         width: 93vw;
-        max-width: 500px;
+        max-width: 450px;
     }
     .blob {
         width: 80vw;
@@ -181,7 +181,7 @@ nav {
         max-width: 500px;
         right: 0;
         top: calc(12em + 6vw);
-        border-radius: 100px 0 0 120px;
+        border-radius: 100px 0 0 170px;
         position: absolute;
         z-index: -1;
         background: $soft-blue;
@@ -218,7 +218,7 @@ nav {
     }
 
     .tabs {
-        padding: 3em 0;
+        padding-top: 3em;
         display: flex;
         flex-direction: column;
 
@@ -226,7 +226,7 @@ nav {
             padding: 1.2em;
             font-size: 1rem;
             letter-spacing: 1px;
-            color: rgb(124, 124, 124);
+            color: rgb(82, 82, 82);
             background: none;
             border: none;
             border-top: 1px rgb(228, 228, 228) solid;
@@ -239,7 +239,8 @@ nav {
         }
 
         button.active {
-            color: rgb(56, 56, 56);
+            color: black;
+            font-weight: 500;
             &::after {
                 content: "";
                 background: $soft-red;
@@ -281,7 +282,7 @@ nav {
             right: 0;
             top: 18vw;
 
-            border-radius: 0 90px 90px 0;
+            border-radius: 0 130px 130px 0;
             position: absolute;
             margin-left: -15vw;
             left: 0;
@@ -304,6 +305,8 @@ nav {
 
         .card {
             width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
             height: 23em;
             margin-bottom: 3em;
             padding: 1.6em;
@@ -428,7 +431,7 @@ nav {
         position: relative;
 
         .input {
-            padding-bottom: 1.5em;
+            margin-bottom: 1em;
             input {
                 padding: 1em;
                 border-radius: 4px;
@@ -454,14 +457,17 @@ nav {
             border-radius: 5px;
             border: 3px $soft-red solid;
 
-            p {
+            .error_msg {
                 display: block;
                 text-transform: none;
                 text-align: left;
                 font-size: 0.7rem;
                 letter-spacing: 1px;
-                padding-left: 1em;
-                padding-top: 0.5em;
+                padding: 0.5em 0 0.3em 1em;
+            }
+
+            .succ_msg {
+                display: none;
             }
 
             img {
@@ -469,6 +475,21 @@ nav {
                 position: absolute;
                 right: 1em;
                 top: 1em;
+            }
+        }
+
+        .success {
+            padding: 0;
+
+            .error_msg {
+                display: none;
+            }
+            .succ_msg {
+                display: block;
+                text-align: left;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                padding-top: 0.8em;
             }
         }
 
@@ -638,11 +659,6 @@ footer {
             max-width: 500px;
             margin: 0 auto;
         }
-
-        .cards {
-            max-width: 350px;
-            margin: 0 auto;
-        }
     }
 
     .features {
@@ -696,9 +712,9 @@ footer {
             }
 
             &::after {
-                top: 11vw;
+                top: calc(3em + 5vw);
                 width: 45vw;
-                height: 20vw;
+                height: calc(11em + 10vw);
             }
         }
 
@@ -726,10 +742,15 @@ footer {
     }
 
     .contact {
+        padding: 3em 0 1em;
         form {
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 1em;
+
+            .input {
+                height: 4.8em;
+            }
 
             .error {
                 img {
@@ -746,7 +767,7 @@ footer {
     }
 
     footer {
-        padding: 1.5em 0;
+        padding: 1.2em 0;
 
         .container {
             display: grid;
@@ -771,7 +792,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1010px) {
+@media screen and (min-width: 1070px) {
     body {
         font-size: 20px;
     }
@@ -789,7 +810,8 @@ footer {
         gap: 5em;
 
         .hero_img {
-            max-width: 600px;
+            max-width: 620px;
+            width: 43vw;
             grid-column: 2;
             padding: 0;
             margin-right: -5em;
@@ -824,9 +846,9 @@ footer {
             gap: 6em;
 
             &::after {
-                top: 9.5vw;
+                top: 11vw;
                 max-width: 630px;
-                height: 28vw;
+                height: 22vw;
             }
         }
     }
@@ -851,6 +873,7 @@ footer {
 
                 a {
                     padding: 1em;
+                    font-size: 0.7em;
                 }
 
                 .logo {
@@ -870,7 +893,11 @@ footer {
     }
 
     .contact {
-        padding: 3em 0 2em;
+        // padding: 3em 0 0;
+
+        form .input {
+            height: 3.6em;
+        }
 
         form .error img {
             right: 7.7em;

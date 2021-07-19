@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5368DF" />
   <!-- displays site properly based on user's device -->
 
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
@@ -195,7 +196,8 @@
       <form>
         <div class="input">
           <input type="text" placeholder="Enter your email address" onkeyup="validation()" required>
-          <p><i>Whoops make sure it's an email</i></p>
+          <p class="error_msg"><i>Whoops make sure it's an email</i></p>
+          <p class="succ_msg"><i>Email successfully submitted!</i></p>
           <img src="./images/icon-error.svg" alt="error symbol">
         </div>
         <button type="submit">Contact Us</button>
